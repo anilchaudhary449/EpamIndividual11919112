@@ -1,31 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite" parallel="tests" thread-count="5">
-<!--    <test verbose="2" preserve-order="true" name="E:/Epam/IndividualEpamProject/testng.xml">-->
-<!--        <classes/>-->
-<!--    </test>-->
-<!--    <test verbose="2" preserve-order="true"-->
-<!--          name="E:/Epam/IndividualEpamProject/src/test/java/org/example/PasteBinTest.java">-->
-<!--        <classes>-->
-<!--            <class name="org.example.PasteBinTest">-->
-<!--                <methods>-->
-<!--                    <include name="verifyBin"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
     <test verbose="2" preserve-order="true"
-          name="E:/Epam/IndividualEpamProject/src/test/java/org/example/GoogleCloudPricingCalculatorTest.java">
+          name="E:/Epam/IndividualEpamProject/src/main/java/org/example/GoogleCloudPricingCalculator.java">
         <classes>
-            <class name="org.example.GoogleCloudPricingCalculatorTest">
-                <methods>
-                    <include name="checkInformationInVmClass"/>
-                    <include name="checkInformationInInstanceType"/>
-                    <include name="checkRegion"/>
-                    <include name="checkLocalSsdSpace"/>
-                    <include name="checkCommitment"/>
-                </methods>
-            </class>
+            <class name="org.example.GoogleCloudPricingCalculatorTest"/>
         </classes>
     </test>
 </suite>
