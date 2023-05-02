@@ -37,6 +37,7 @@ public class GoogleCloudPricingCalculator {
     private final By commitmentTermOneYear = By.xpath("//div[contains (text(),'Commitment term: 1 Year')]");
 
     public void homePage() throws InterruptedException {
+        Thread.sleep(5000);
         //driver.findElement(searchLogo).click();
         WebElement r = driver.findElement(search);
         r.sendKeys("Google Cloud Platform Pricing Calculator");
