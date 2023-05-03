@@ -5,7 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class GoogleCloudPricingCalculatorTest {
+import java.util.concurrent.TimeUnit;
+
+public class GooglePricingCalculatorTest {
 
     GoogleCloudPricingCalculator calculatorPage;
 

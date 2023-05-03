@@ -1,8 +1,14 @@
 package org.example;
 
+import com.browser.BrowserParameters;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+
+import java.awt.*;
+import java.awt.event.KeyEvent;
+import java.util.ArrayList;
 
 public class PasteBin {
     WebDriver driver;
@@ -24,7 +30,7 @@ public class PasteBin {
     public void WriteText() throws InterruptedException {
             driver.findElement(TxtArea).click();
             driver.findElement(TxtArea).sendKeys("Hello from WebDriver");
-            Thread.sleep(5000);
+            Thread.sleep(3000);
 
             JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
             jsExecutor.executeScript("window.scrollBy(0,460)", "");
@@ -32,7 +38,7 @@ public class PasteBin {
         public void setExpirationDuration() throws InterruptedException{
             driver.findElement(ele).click();
             driver.findElement(selectResult).click();
-            Thread.sleep(5000);
+            Thread.sleep(3000);
 
             JavascriptExecutor jsExecutor1 = (JavascriptExecutor) driver;
             jsExecutor1.executeScript("window.scrollBy(0,560)", "");
@@ -41,11 +47,11 @@ public class PasteBin {
         public void setTitle()throws InterruptedException{
             driver.findElement(title).click();
             driver.findElement(title1).sendKeys("hello");
-            Thread.sleep(5000);
+            Thread.sleep(2000);
         }
         public void ConfirmBin()throws InterruptedException {
             driver.findElement(createPaste).click();
-            Thread.sleep(7000);
+            Thread.sleep(2000);
         }
     }
 
