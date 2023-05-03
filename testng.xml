@@ -11,7 +11,7 @@
             </class>
         </classes>
     </test>
-    <test verbose="2" preserve-order="true" parallel="tests" thread-count="5"
+    <test verbose="2" preserve-order="true" parallel="instances" thread-count="5"
           name="E:/Epam/IndividualEpamProject/src/test/java/org/example/GooglePricingCalculatorTest.java">
         <classes>
             <class name="org.example.GooglePricingCalculatorTest">
