@@ -14,7 +14,7 @@ public class PasteBinTest {
     WebDriver driver;
     PasteBin pasteBin;
 
-@Test
+
     public void verifyBin() throws Exception {
         driver=BrowserParameters.setupBrowser("chrome","https://pastebin.com");
         //noinspection deprecation

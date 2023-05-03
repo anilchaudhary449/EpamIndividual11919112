@@ -2,20 +2,11 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true"
-          name="E:/Epam/IndividualEpamProject/src/test/java/org/example/PasteBinTest.java">
-        <classes>
-            <class name="org.example.PasteBinTest">
-                <methods>
-                    <include name="verifyBin"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
-    <test verbose="2" preserve-order="true"
           name="E:/Epam/IndividualEpamProject/src/test/java/org/example/GooglePricingCalculatorTest.java">
         <classes>
             <class name="org.example.GooglePricingCalculatorTest">
                 <methods>
+                    <include name="setPasteBinTest"/>
                     <include name="checkInformationInVmClass"/>
                     <include name="checkInformationInInstanceType"/>
                     <include name="checkRegion"/>
