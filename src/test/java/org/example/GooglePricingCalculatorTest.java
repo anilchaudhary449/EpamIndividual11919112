@@ -10,12 +10,8 @@ import java.util.concurrent.TimeUnit;
 public class GooglePricingCalculatorTest  {
 
     GoogleCloudPricingCalculator calculatorPage;
-    PasteBinTest pasteBinTest=new PasteBinTest();
-@Test(priority = 0)
-    public void setPasteBinTest()throws Exception {
-        pasteBinTest.verifyBin();
-    }
-@Test(dependsOnMethods = "setPasteBinTest")
+
+@Test()
     public void checkInformationInVmClass() throws InterruptedException {
         WebDriver driver= BrowserParameters.setupBrowser("chrome","https://cloud.google.com/");
         Thread.sleep(15000);
@@ -39,7 +35,7 @@ public class GooglePricingCalculatorTest  {
         driver.quit();
     }
 
-    @Test(dependsOnMethods = "setPasteBinTest")
+    @Test()
     public void checkInformationInInstanceType() throws InterruptedException {
         WebDriver driver= BrowserParameters.setupBrowser("chrome","https://cloud.google.com/");
 
@@ -61,7 +57,7 @@ public class GooglePricingCalculatorTest  {
         Assert.assertEquals(instanceType,"Instance type: n1-standard-8\n" + "Committed Use Discount applied");
         driver.quit();
     }
-    @Test(dependsOnMethods = "setPasteBinTest")
+    @Test()
     public void checkRegion() throws InterruptedException {
         WebDriver driver= BrowserParameters.setupBrowser("chrome","https://cloud.google.com/");
 
@@ -83,7 +79,7 @@ public class GooglePricingCalculatorTest  {
         Assert.assertEquals(region,"Region: Frankfurt");
         driver.quit();
     }
-    @Test(dependsOnMethods = "setPasteBinTest")
+    @Test()
     public void checkLocalSsdSpace() throws InterruptedException {
         WebDriver driver= BrowserParameters.setupBrowser("chrome","https://cloud.google.com/");
 
@@ -105,7 +101,7 @@ public class GooglePricingCalculatorTest  {
         Assert.assertEquals(ssd,"Local SSD: 2x375 GiB\n" + "Committed Use Discount applied");
         driver.quit();
     }
-    @Test(dependsOnMethods = "setPasteBinTest")
+    @Test()
     public void checkCommitment() throws InterruptedException {
         WebDriver driver= BrowserParameters.setupBrowser("chrome","https://cloud.google.com/");
 

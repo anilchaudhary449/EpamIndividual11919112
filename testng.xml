@@ -1,19 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
-    <test verbose="2" preserve-order="true"
-          name="E:/Epam/IndividualEpamProject/src/test/java/org/example/GooglePricingCalculatorTest.java">
-        <classes>
-            <class name="org.example.GooglePricingCalculatorTest">
-                <methods>
-                    <include name="setPasteBinTest"/>
-                    <include name="checkInformationInVmClass"/>
-                    <include name="checkInformationInInstanceType"/>
-                    <include name="checkRegion"/>
-                    <include name="checkLocalSsdSpace"/>
-                    <include name="checkCommitment"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
-</suite>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><suite name="All Test Suite"><test verbose="2" preserve-order="true" name="E:/Epam/IndividualEpamProject/src/test/java/org/example/GooglePricingCalculatorTest.java"><classes><class name="org.example.GooglePricingCalculatorTest"><methods><include name="setPasteBinTest"/><include name="checkInformationInVmClass"/><include name="checkInformationInInstanceType"/><include name="checkRegion"/><include name="checkLocalSsdSpace"/><include name="checkCommitment"/></methods></class></classes></test><test verbose="2" preserve-order="true" name="E:/Epam/IndividualEpamProject/src/test/java/org/example/PasteBinTest.java"><classes/></test></suite>
