@@ -14,10 +14,10 @@ public class PasteBinTest {
     WebDriver driver;
     PasteBin pasteBin;
 
-
-    @Test
+@Test
     public void verifyBin() throws Exception {
         driver=BrowserParameters.setupBrowser("chrome","https://pastebin.com");
+        //noinspection deprecation
         driver.manage().timeouts().implicitlyWait(15000, TimeUnit.MILLISECONDS);
 
         pasteBin = new PasteBin(driver);

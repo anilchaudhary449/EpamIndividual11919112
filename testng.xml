@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite" >
+<suite name="All Test Suite">
     <test verbose="2" preserve-order="true"
           name="E:/Epam/IndividualEpamProject/src/test/java/org/example/PasteBinTest.java">
         <classes>
@@ -11,7 +11,7 @@
             </class>
         </classes>
     </test>
-    <test verbose="2" preserve-order="true" parallel="instances" thread-count="5"
+    <test verbose="2" preserve-order="true"
           name="E:/Epam/IndividualEpamProject/src/test/java/org/example/GooglePricingCalculatorTest.java">
         <classes>
             <class name="org.example.GooglePricingCalculatorTest">

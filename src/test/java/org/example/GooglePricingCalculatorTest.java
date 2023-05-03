@@ -7,14 +7,18 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class GooglePricingCalculatorTest {
+public class GooglePricingCalculatorTest  {
 
     GoogleCloudPricingCalculator calculatorPage;
-
-    @Test
+    PasteBinTest pasteBinTest=new PasteBinTest();
+@Test(priority = 0)
+    public void setPasteBinTest()throws Exception {
+        pasteBinTest.verifyBin();
+    }
+@Test(dependsOnMethods = "setPasteBinTest")
     public void checkInformationInVmClass() throws InterruptedException {
         WebDriver driver= BrowserParameters.setupBrowser("chrome","https://cloud.google.com/");
-
+        Thread.sleep(15000);
         calculatorPage = new GoogleCloudPricingCalculator(driver);
         calculatorPage.homePage();
         calculatorPage.sendKeyInToNumberOfInstancesField("4");
@@ -35,7 +39,7 @@ public class GooglePricingCalculatorTest {
         driver.quit();
     }
 
-    @Test
+    @Test(dependsOnMethods = "setPasteBinTest")
     public void checkInformationInInstanceType() throws InterruptedException {
         WebDriver driver= BrowserParameters.setupBrowser("chrome","https://cloud.google.com/");
 
@@ -57,7 +61,7 @@ public class GooglePricingCalculatorTest {
         Assert.assertEquals(instanceType,"Instance type: n1-standard-8\n" + "Committed Use Discount applied");
         driver.quit();
     }
-    @Test
+    @Test(dependsOnMethods = "setPasteBinTest")
     public void checkRegion() throws InterruptedException {
         WebDriver driver= BrowserParameters.setupBrowser("chrome","https://cloud.google.com/");
 
@@ -79,7 +83,7 @@ public class GooglePricingCalculatorTest {
         Assert.assertEquals(region,"Region: Frankfurt");
         driver.quit();
     }
-    @Test
+    @Test(dependsOnMethods = "setPasteBinTest")
     public void checkLocalSsdSpace() throws InterruptedException {
         WebDriver driver= BrowserParameters.setupBrowser("chrome","https://cloud.google.com/");
 
@@ -101,7 +105,7 @@ public class GooglePricingCalculatorTest {
         Assert.assertEquals(ssd,"Local SSD: 2x375 GiB\n" + "Committed Use Discount applied");
         driver.quit();
     }
-    @Test
+    @Test(dependsOnMethods = "setPasteBinTest")
     public void checkCommitment() throws InterruptedException {
         WebDriver driver= BrowserParameters.setupBrowser("chrome","https://cloud.google.com/");
 
